@@ -49,6 +49,7 @@
         // } catch (error) {
         //   console.log(error.message)
         // }
+        //getTopMoviesIds(2).then(ids => console.log(ids))
 
         const popularMovies = await getPopularMovies();
         const ids = popularMovies.slice(0, n).map(movie => movie.id);
