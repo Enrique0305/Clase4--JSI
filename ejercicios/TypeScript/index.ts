@@ -4,7 +4,7 @@ function add( a:number,b:number){
     return a+b;
 }
 //analisis estatico al codigo
-const sum =add(6,2);
+const sum =add(6,3);
 
 // TIPOS DE DATOS
 // booleanos
@@ -27,7 +27,7 @@ let saludo = `Me llamo ${nombre}`;
 
 let people:string[] =[];
 people=["Isabel","Monica","Raul"];
-//people.push("9")
+//people.push('9')
 
 let peopleAndNumbers:Array<string|number>=[];
 peopleAndNumbers.push("Roberto")
@@ -39,7 +39,7 @@ enum Color{
     Verde="Verde",
     Azul="Azul"
 }
-let colorFavorito:Color=Color.Rojo
+let colorFavorito:Color= Color.Rojo
 console.log(`Mi color favorito es ${colorFavorito}`)
 
 // Any
@@ -66,7 +66,7 @@ function createAdder(a:number):(number)=>number{
 const addFour = createAdder(4)
 const fourPlus6 = addFour(6)
 
-function fullName(firstName:string,lastName?:string):string{
+function fullName(firstName:string,lastName ='chalco'  ):string{
     return `${firstName} ${lastName}`;
 }
 
@@ -84,11 +84,11 @@ interface Rectangulo {
 let rect : Rectangulo = {
     ancho: 6,
     alto:4,
-    color:Color.Azul,
+    //color:Color.Verde,
 }
 
 function area (r:Rectangulo){
-    return r.alto *r.ancho;
+    return r.alto * r.ancho;
 }
 
 const areaRect = area(rect);

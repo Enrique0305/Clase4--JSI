@@ -37,7 +37,7 @@
 
       // Establece `this` usando `apply` y pasar argumentos a la función
       const valores = [800, 'noreste'];
-      caminar.apply(richard, valores);
+      caminar.apply(richard,  valores);
 
       /*
         Call - comma
@@ -49,8 +49,8 @@
       const danielSaluda = saludar.bind(daniel);
       danielSaluda();
 
-      const danielCamina = caminar.bind(daniel, 2000);
-      danielCamina('oeste');
+      const danielCamina = caminar.bind(daniel);
+      danielCamina(2000,'oeste');
 
       // Cuándo es útil usar uno de estos métodos
       const buttons = document.getElementsByClassName('call-to-action');

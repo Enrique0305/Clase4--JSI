@@ -115,6 +115,14 @@
         const movie = await getFastestTopMovie();
         renderMovies([movie]);
       };
+
+      function moreAsync(){
+        console.log('start')
+        setTimeout(()=>console.log('soy un setTimeOut'),0);
+        Promise.resolve('Promise 1').then(msg=> console.log(msg))
+        Promise.resolve('Promise 1').then(msg=> console.log(msg))
+        console.log('end')
+      }
     </script>
   </body>
 </html>
