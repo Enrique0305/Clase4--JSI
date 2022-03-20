@@ -12,8 +12,7 @@
       // printColor
 
       // IIFE
-      
-      // (function () {
+      // (function(){
       //   let color = 'green';
 
       //   function printColor() {
@@ -33,7 +32,8 @@
       // }
 
       // let greenColorPrinter = makeColorPrinter('green');
-      // console.log(greenColorPrinter());
+      // //console.log(greenColorPrinter());
+      // greenColorPrinter();
 
       // variables "privadas"
       // const counter = {
@@ -72,6 +72,22 @@
 
       counter.count = 0;
       console.log('The count is:', counter.getCount());
+      console.log('The count is:', counter.getCount());
+
+
+      ///*********/Es importante mencionar que EcmaScript cada año lanzo nuevos estándares.
+//Uno de los principales para este año es que contara variables privadas dentro de las clases.
+
+class Message {
+  #message = "Howdy"
+
+  greet() { console.log(this.#message) }
+}
+
+const greeting = new Message()
+
+greeting.greet() // Howdy
+//console.log(greeting.#message) // Private name #message is not defined```
     </script>
   </body>
 </html>
