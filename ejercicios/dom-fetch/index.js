@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
             const footer = document.createElement('footer');
             const br = document.createElement('br');
             const hr = document.createElement('hr')
-        //Creamos el boton de eliminar        
+        // //Creamos el boton de eliminar        
             const dislikesBtn = document.createElement('button');
         //Agregar clases e ids apropiados. Tome datos e insértelos si es necesario.
             quoteLi.className = 'quote-card';          //for styling
