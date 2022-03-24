@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Getter and Setter in object</title>
+</head>
+<body>
+    <script>
+        const person ={
+        nombre:'Enrique',
+        apellido:'Chalco',
+        get nombreCompleto(){
+            return `${this.nombre} ${this.apellido}`
+        },
+        set nombreCompleto(value){
+            const data=value.split(' ')
+            this.nombre =data[0]
+            this.apellido=data[1]
+        }
+    }
+    person.nombreCompleto='Monica F'  
+    console.log(person.nombreCompleto)
+    </script>
+</body>
+</html>
