@@ -27,19 +27,19 @@ let saludo = `Me llamo ${nombre}`;
 
 let people:string[] =[];
 people=["Isabel","Monica","Raul"];
-//people.push('9')
+people.push('9')
 
-let peopleAndNumbers:Array<string|number>=[];
+let peopleAndNumbers:Array<string|number|object>=[];
 peopleAndNumbers.push("Roberto")
 peopleAndNumbers.push(9000)
 
 // Enum
 enum Color{
-    Rojo ="Rojo",
-    Verde="Verde",
-    Azul="Azul"
+    Rojo='rojo',
+    Verde='verde',
+    Azul='azul'
 }
-let colorFavorito:Color= Color.Rojo
+let colorFavorito:Color= Color.Azul
 console.log(`Mi color favorito es ${colorFavorito}`)
 
 // Any
@@ -66,11 +66,11 @@ function createAdder(a:number):(number)=>number{
 const addFour = createAdder(4)
 const fourPlus6 = addFour(6)
 
-function fullName(firstName:string,lastName ='chalco'  ):string{
+function fullName(firstName:string='Enrique',lastName: string):string{
     return `${firstName} ${lastName}`;
 }
 
-const nombre1 =fullName('enrique');
+const nombre1 =fullName(undefined,'chalco');
 console.log(nombre1);
 
 //Interface: forma exacta en la que se va definir un objeto
@@ -84,7 +84,7 @@ interface Rectangulo {
 let rect : Rectangulo = {
     ancho: 6,
     alto:4,
-    //color:Color.Verde,
+    color:Color.Verde,
 }
 
 function area (r:Rectangulo){

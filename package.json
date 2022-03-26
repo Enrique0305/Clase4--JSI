@@ -4,7 +4,7 @@
   "description": "Proyecto Media player",
   "main": "index.js",
   "scripts": {
-    "start": "parcel index.html ejercicios/index.html ejercicios/**/*.html"
+    "start": "parcel index.html ejercicios/index.html ejercicios/**/*.html dom-fetch/*.html"
   },
   "repository": {
     "type": "git",
