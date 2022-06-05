@@ -1,26 +1,25 @@
 <html>
-  <head>
-    <title>Closures</title>
-  </head>
 
-  <body>
-    <a href="/ejercicios/">Go back</a>
-    <p><em>Abre la consola</em></p>
+<head>
+  <title>Closures</title>
+</head>
 
-    <script>
-      // Closures
-      // printColor
+<body>
+  <a href="/ejercicios/">Go back</a>
+  <p><em>Abre la consola</em></p>
 
-      // IIFE
-      // (function(){
-      //   let color = 'green';
+  <script>
+    // Closures
+    // printColor
 
-      //   function printColor() {
-      //     console.log(color);
-      //   }
-
-      //   printColor();
-      // })();
+    // IIFE
+    //(function(){})();
+    // (()=>{
+    //   let color = 'green';
+    //   function printColor() {
+    //     console.log(color);
+    //   }
+    // })();
 
       // Funciones que regresan funciones
       // function makeColorPrinter(color) {
@@ -32,7 +31,7 @@
       // }
 
       // let greenColorPrinter = makeColorPrinter('green');
-      // //console.log(greenColorPrinter());
+      // console.log(greenColorPrinter());
       // greenColorPrinter();
 
       // variables "privadas"
@@ -43,36 +42,36 @@
       // counter.count = 99;
       // console.log(counter.count);
 
-      function makeCounter(n) {
-        let count = n;
+      // function makeCounter(n) {
+      //   let count = n;
 
-        return {
-          increase: function() {
-            count = count + 1;
-          },
-          decrease: function() {
-            count = count - 1;
-          },
-          getCount: function() {
-            return count;
-          },
-        };
-      }
+      //   return {
+      //     increase: () =>{
+      //       count = count + 1;
+      //     },
+      //     decrease: ()=> {
+      //       count = count - 1;
+      //     },
+      //     getCount: ()=> {
+      //       return count;
+      //     },
+      //   };
+      // }
 
-      let counter = makeCounter(7);
+      // let counter = makeCounter(7);
 
-      console.log('The count is:', counter.getCount());
-      counter.increase();
-      console.log('The count is:', counter.getCount());
-      counter.decrease();
-      counter.decrease();
-      counter.decrease();
-      counter.decrease();
-      console.log('The count is:', counter.getCount());
+      // console.log('The count is:', counter.getCount());
+      // counter.increase();
+      // console.log('The count is:', counter.getCount());
+      // counter.decrease();
+      // counter.decrease();
+      // counter.decrease();
+      // counter.decrease();
+      // console.log('The count is:', counter.getCount());
 
-      counter.count = 0;
-      console.log('The count is:', counter.getCount());
-      console.log('The count is:', counter.getCount());
+      // counter.count = 0;
+      // console.log('The count is:', counter.getCount());
+      // console.log('The count is:', counter.getCount());
 
 
       ///*********/Es importante mencionar que EcmaScript cada año lanzo nuevos estándares.
@@ -87,7 +86,8 @@ class Message {
 const greeting = new Message()
 
 greeting.greet() // Howdy
-//console.log(greeting.#message) // Private name #message is not defined```
-    </script>
-  </body>
+console.log(greeting.message); // Private name #message is not defined```
+  </script>
+</body>
+
 </html>
